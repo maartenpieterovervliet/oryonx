@@ -1,4 +1,4 @@
-(()=>{'use strict';const canvas=document.querySelector('[data-organism-canvas]');if(!canvas)return;const ctx=canvas.getContext('2d');if(!ctx)return;const host=canvas.closest('.immersive-hero'),pause=host.querySelector('[data-organism-pause]'),rm=matchMedia('(prefers-reduced-motion: reduce)');const variant=JSON.parse(host.dataset.variant);let width=1,height=1,dpr=1,time=variant.seed,frame=0,last=0,visible=false,playing=true;
+(()=>{'use strict';let canvas=document.querySelector('[data-organism-canvas]');if(!canvas){const art=document.querySelector('.immersive-hero .immersive-art');if(!art)return;canvas=document.createElement('canvas');canvas.setAttribute('data-organism-canvas','');art.appendChild(canvas);}const ctx=canvas.getContext('2d');if(!ctx)return;const host=canvas.closest('.immersive-hero'),pause=host.querySelector('[data-organism-pause]'),rm=matchMedia('(prefers-reduced-motion: reduce)');const variant=JSON.parse(host.dataset.variant);let width=1,height=1,dpr=1,time=variant.seed,frame=0,last=0,visible=false,playing=true;
 function configuration(t){
 return {
 stretch:1+.34*Math.sin(t*.193)+.12*Math.sin(t*.419),
