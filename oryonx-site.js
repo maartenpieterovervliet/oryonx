@@ -59,3 +59,6 @@ if(!('onpagereveal' in window)||location.protocol==='file:')root.classList.add('
 
 // Keep the shared footer wording consistent on earlier published pages.
 (()=>{const label=document.querySelector(".footer-bottom>span");if(label)label.textContent=label.textContent.replace(", Nederland", "");})();
+
+// Use the office number consistently on older published pages.
+(()=>{document.querySelectorAll('a[href="tel:+31642296650"]').forEach(a=>a.setAttribute("href","tel:+31206366921"));const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode()){if(!["SCRIPT","STYLE"].includes(node.parentElement?.tagName)&&node.nodeValue.includes("+31 6 4229 6650"))node.nodeValue=node.nodeValue.replaceAll("+31 6 4229 6650","020 636 6921");}})();
