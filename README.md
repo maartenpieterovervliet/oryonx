@@ -1,2 +1,3 @@
-# oryonx
-ORYONX — AI-based werken voor organisaties
+# ORYONX
+
+Public website for ORYONX. Published with GitHub Pages.
