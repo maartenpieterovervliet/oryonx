@@ -11,8 +11,8 @@ html[data-theme="palette"] .hero h1 em{color:var(--k)}
 html[data-theme="palette"] .theme-switch{border-color:var(--line)}
 .theme-switch{max-width:calc(100vw - 20px);flex-wrap:wrap}.theme-switch button{padding:10px 12px}
 @view-transition{navigation:auto}
-::view-transition-old(root){animation:oryonx-out .22s ease both}
-::view-transition-new(root){animation:oryonx-in .32s ease both}
+::view-transition-old(root){animation:oryonx-out .6s cubic-bezier(.4,0,.2,1) both;mix-blend-mode:normal}
+::view-transition-new(root){animation:oryonx-in .6s cubic-bezier(.4,0,.2,1) both;mix-blend-mode:normal}
 @keyframes oryonx-out{from{opacity:1}to{opacity:0}}
 @keyframes oryonx-in{from{opacity:0}to{opacity:1}}
 html.fade-fallback body{animation:oryonx-in .28s ease both}
