@@ -56,3 +56,6 @@ if(!('onpagereveal' in window)||location.protocol==='file:')root.classList.add('
 
 // Refresh the shared palette on pages published before asset versioning.
 (()=>{const link=document.querySelector('link[href*="oryonx-page-palette.css"]');if(!link)return;const url=new URL(link.href,location.href);if(url.searchParams.get("rev")!=="20260907-muted-contact"){url.searchParams.set("rev","20260907-muted-contact");link.href=url.href;}})();
+
+// Keep the shared footer wording consistent on earlier published pages.
+(()=>{const label=document.querySelector(".footer-bottom>span");if(label)label.textContent=label.textContent.replace(", Nederland", "");})();
